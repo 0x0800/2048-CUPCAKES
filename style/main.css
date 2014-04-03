@@ -1,4 +1,5 @@
 @import url(fonts/clear-sans.css);
+/* $tile-gold-glow-color: lighten($tile-gold-color, 15%); */
 html, body {
   margin: 0;
   padding: 0;
@@ -215,7 +216,7 @@ hr {
       vertical-align: middle;
       margin-left: 10px; }
     .game-container .game-message.game-won {
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(88, 46, 116, 0.5);
       color: white; }
       .game-container .game-message.game-won a.keep-playing-button {
         display: inline-block; }
@@ -338,69 +339,69 @@ hr {
       height: 100%; }
   .tile.tile-2 .tile-inner {
     background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-4 .tile-inner {
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    background: #eeeaf1;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-8 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    background: #ddd5e3;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-16 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    background: #ccc0d5;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-32 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.07937), inset 0 0 0 1px rgba(255, 255, 255, 0.04762); }
+    background: #bcabc7;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.07937), inset 0 0 0 1px rgba(255, 255, 255, 0.04762); }
   .tile.tile-64 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.15873), inset 0 0 0 1px rgba(255, 255, 255, 0.09524); }
+    background: #ab96b9;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.15873), inset 0 0 0 1px rgba(255, 255, 255, 0.09524); }
   .tile.tile-128 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    background: #9a81ab;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    background: #8a6c9d;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    background: #79578f;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-512 .tile-inner {
         font-size: 25px; } }
   .tile.tile-1024 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    background: #684281;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
     color: white;
-    background: white;
-    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    background: #582e74;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-2048 .tile-inner {
         font-size: 15px; } }
   .tile.tile-super .tile-inner {
     color: white;
-    background: #3d3d3d;
+    background: #343236;
     font-size: 30px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
@@ -634,7 +635,7 @@ hr {
         vertical-align: middle;
         margin-left: 10px; }
       .game-container .game-message.game-won {
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(88, 46, 116, 0.5);
         color: white; }
         .game-container .game-message.game-won a.keep-playing-button {
           display: inline-block; }
@@ -793,56 +794,56 @@ hr {
 
 .cell-2 {
   background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
 
 .cell-4 {
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+  background: #eeeaf1;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
 
 .cell-8 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+  background: #ddd5e3;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
 
 .cell-16 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+  background: #ccc0d5;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
 
 .cell-32 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.07937), inset 0 0 0 1px rgba(255, 255, 255, 0.04762); }
+  background: #bcabc7;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.07937), inset 0 0 0 1px rgba(255, 255, 255, 0.04762); }
 
 .cell-64 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.15873), inset 0 0 0 1px rgba(255, 255, 255, 0.09524); }
+  background: #ab96b9;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.15873), inset 0 0 0 1px rgba(255, 255, 255, 0.09524); }
 
 .cell-128 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286); }
+  background: #9a81ab;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286); }
 
 .cell-256 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048); }
+  background: #8a6c9d;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048); }
 
 .cell-512 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381); }
+  background: #79578f;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381); }
 
 .cell-1024 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
+  background: #684281;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571); }
 
 .cell-2048 {
   color: white;
-  background: white;
-  box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); }
+  background: #582e74;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); }
 
 .repo-link {
   margin-top: 40px;
