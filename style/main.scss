@@ -182,7 +182,7 @@ strong {
 
 hr {
   border: none;
-  border-bottom: 1px solid darken($text-color, 30%);
+  border-bottom: 1px solid lighten($game-container-background, 15%);
   margin-top: 20px;
   margin-bottom: 30px;
 }
