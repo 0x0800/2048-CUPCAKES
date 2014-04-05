@@ -567,7 +567,7 @@ hr {
     font-size: 16px;
     margin-top: 10px; }
 
-  .restart-button {
+  .restart-button, .retry-button {
     width: 42%;
     padding: 0;
     display: block;
