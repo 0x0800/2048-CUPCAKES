@@ -845,6 +845,11 @@ hr {
   background: #582e74;
   box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); }
 
+.cell-4096 {
+  color: white;
+  background: #582e74;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333); }
+
 .repo-link {
   margin-top: 40px;
   margin-right: 20px;

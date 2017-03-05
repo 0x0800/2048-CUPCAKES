@@ -41,7 +41,8 @@ $special-colors: false false, // 2
                  false true, // 256
                  false true, // 512
                  false true, // 1024
-                 false true; // 2048
+                 false true, // 2048
+                 false true; // 4096
 
 $title-container-size: 30px;
 
@@ -72,14 +73,14 @@ h1.title {
   margin: 0;
   display: block;
   text-align: center;
-  
+
   & small {
     font-size: 60px;
   }
 }
 
 .title-container {
-    
+
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
@@ -277,7 +278,7 @@ hr {
 	  display: none;
 	}
       }
-      
+
       .score-sharing {
         display: inline-block;
         vertical-align: middle;
@@ -376,7 +377,7 @@ hr {
     z-index: 10;
 
     font-size: 55px;
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -390,7 +391,7 @@ hr {
   transition-property: transform;
 
   $exponent: 1;
-  
+
   // Build tile colors
   @while $exponent <= $limit {
     $power: pow($base, $exponent);
@@ -538,7 +539,7 @@ hr {
   h1.title {
     font-size: 27px;
     margin-top: 15px;
-    
+
     & small {
       font-size: 27px;
     }
@@ -596,7 +597,7 @@ hr {
     .lower {
       margin-top: 30px !important;
     }
-    
+
     &.game-won .score-sharing {
       margin-top: 10px;
     }
@@ -606,7 +607,7 @@ hr {
 .legend-row {
   padding: 10px 5px;
   @include clearfix;
-  
+
   p {
     margin-left: ($field-width / 3);
     margin-top: ($field-width / 12);
@@ -649,7 +650,7 @@ hr {
   border-radius: $tile-border-radius;
 
   background: rgba($tile-color, .35);
-  
+
   img {
     width: 100%;
     height: 100%;

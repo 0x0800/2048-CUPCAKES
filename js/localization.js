@@ -1,5 +1,5 @@
 String.toLocaleString({
-    
+
 	"it": {
 		"%game-intro"           : "Join the <strong>Cupcakes!</strong>",
 		"%restart-button"       : "Play Again",
@@ -23,7 +23,8 @@ String.toLocaleString({
     '%256'                  : 'toasted marshmallow',
     '%512'                  : 'cookies and creme',
     '%1024'                 : 'chocolate sundae',
-    '%2048'                 : 'white chocolate peppermint',
+		'%2048'                 : 'white chocolate peppermint',
+		'%4096'                 : '2017 Confetti Vanilla',
 		'%p0'                   : 'vanilla birthday',
     '%p4'                   : 'bubblegum pink',
     '%p8'                   : 'sunshine vanilla',
@@ -35,8 +36,9 @@ String.toLocaleString({
     '%p512'                 : 'cookies and creme',
     '%p1024'                : 'choc. sundae',
     '%p2048'                : 'white choc. peppermint',
+		'%p4096'                : '2017 Confetti Vanilla',
 	},
-	
+
 	"en": {
 		"%game-intro"           : "Join the <strong>Cupcakes!</strong>",
 		"%restart-button"       : "Play Again",
@@ -61,6 +63,7 @@ String.toLocaleString({
     '%512'                  : 'cookies and creme',
     '%1024'                 : 'chocolate sundae',
     '%2048'                 : 'white chocolate peppermint',
+		'%4096'                 : '2017 Confetti Vanilla',
 		'%p0'                   : 'vanilla birthday',
     '%p4'                   : 'bubblegum pink',
     '%p8'                   : 'sunshine vanilla',
@@ -72,6 +75,7 @@ String.toLocaleString({
     '%p512'                 : 'cookies and creme',
     '%p1024'                : 'choc. sundae',
     '%p2048'                : 'white choc. peppermint',
+		'%p4096'                : '2017 Confetti Vanilla',
 	}
 
 });
