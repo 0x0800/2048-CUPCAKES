@@ -111,7 +111,7 @@ GameManager.prototype.localizeElements = function () {
 GameManager.prototype.fillLegend = function () {
 
   var legend = document.getElementsByClassName("tile-legend");
-  for (var i = 1; i <= 12; i++) {
+  for (var i = 1; i <= 13; i++) {
     var exp = Math.pow(2, i);
     var row = document.createElement("div");
     var grid = document.createElement("div");
@@ -244,7 +244,7 @@ GameManager.prototype.move = function (direction) {
           if (merged.value > self.score) self.score = merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 4096) self.won = true;
+          if (merged.value === 2048) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }

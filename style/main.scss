@@ -28,7 +28,7 @@ $game-container-background: #F67098;
 $transition-speed: 100ms;
 
 $base: 2;
-$limit: 11;
+$limit: 13;
 
 // Colors for all 11 states, false = no special color
 $special-colors: false false, // 2
@@ -42,7 +42,8 @@ $special-colors: false false, // 2
                  false true, // 512
                  false true, // 1024
                  false true, // 2048
-                 false true; // 4096
+                 false true, // 4096
+                 false true; // 8192
 
 $title-container-size: 30px;
 
