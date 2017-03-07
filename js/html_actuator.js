@@ -1,11 +1,14 @@
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
+  this.scorePoints      = document.querySelector(".score-points");
   this.bestContainer    = document.querySelector(".best-container");
+  this.bestPoints       = document.querySelector(".best-points");
   this.messageContainer = document.querySelector(".game-message");
   this.sharingContainer = document.querySelector(".score-sharing");
 
   this.score = 0;
+  this.points = 0;
 }
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
@@ -22,8 +25,8 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
       });
     });
 
-    self.updateScore(metadata.score);
-    self.updateBestScore(metadata.bestScore);
+    self.updateScore(metadata.score, metadata.points);
+    self.updateBestScore(metadata.bestScore, metadata.bestPoints);
 
     if (metadata.terminated) {
       if (metadata.over) {
@@ -108,13 +111,17 @@ HTMLActuator.prototype.positionClass = function (position) {
   return "tile-position-" + position.x + "-" + position.y;
 };
 
-HTMLActuator.prototype.updateScore = function (score) {
+HTMLActuator.prototype.updateScore = function (score, points) {
   this.clearContainer(this.scoreContainer);
+  this.clearContainer(this.scorePoints);
 
   var difference = score - this.score;
   this.score = score;
+	var pointDifference = points - this.points;
+	this.points = points;
 
   // this.scoreContainer.textContent = this.score;
+	this.scorePoints.textContent = this.points;
   this.scoreContainer.textContent = Localize( "p" + this.score );
 
   if (difference > 0) {
@@ -125,10 +132,18 @@ HTMLActuator.prototype.updateScore = function (score) {
 
     this.scoreContainer.appendChild(addition);
   }
+
+	if (pointDifference > 0) {
+		var punti = document.createElement("div");
+		punti.classList.add("score-addition");
+		punti.textContent = "+" + pointDifference;
+		this.scorePoints.appendChild(punti);
+	}
 };
 
-HTMLActuator.prototype.updateBestScore = function (bestScore) {
+HTMLActuator.prototype.updateBestScore = function (bestScore, bestPoints) {
   this.bestContainer.textContent = Localize( "p" + bestScore);
+  this.bestPoints.textContent = bestPoints;
 };
 
 HTMLActuator.prototype.message = function (won) {
@@ -137,7 +152,7 @@ HTMLActuator.prototype.message = function (won) {
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
-  
+
   this.clearContainer(this.sharingContainer);
   this.sharingContainer.appendChild(this.scoreTweetButton());
   twttr.widgets.load();
@@ -158,7 +173,7 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   tweet.setAttribute("data-counturl", "http://0x0800.github.io/2048-CUPCAKES");
   tweet.textContent = "Tweet";
 
-  var text = Localize("tweet1") + Localize( this.score ).toUpperCase() + Localize("tweet2");
+  var text = Localize("tweet1") + Localize( this.score ).toUpperCase() + '", ' + this.points + " Kcal " + Localize("tweet2");
   tweet.setAttribute("data-text", text);
 
   return tweet;

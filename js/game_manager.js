@@ -14,6 +14,26 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.setup();
 }
 
+
+// Set Prices
+function kcal(exp) {
+  var kcal = [];
+  kcal[2]=200;
+  kcal[4]=250;
+  kcal[8]=320;
+  kcal[16]=400;
+  kcal[32]=500;
+  kcal[64]=650;
+  kcal[128]=820;
+  kcal[256]=1000;
+  kcal[512]=1200;
+  kcal[1024]=1500;
+  kcal[2048]=2000;
+  kcal[4096]=3000;
+  kcal[8192]=5000;
+  return kcal[exp];
+}
+
 // Restart the game
 GameManager.prototype.restart = function () {
   this.storageManager.clearGameState();
@@ -27,6 +47,7 @@ GameManager.prototype.crowd = function () {
   this.actuator.continueGame(); // Clear the game won/lost message
   this.grid        = new Grid(this.size);
   this.score       = 0;
+  this.points      = 0;
   this.over        = false;
   this.won         = false;
   this.keepPlaying = false;
@@ -37,7 +58,7 @@ GameManager.prototype.crowd = function () {
       counter++;
       var value = Math.pow(2, counter);
       var tile = new Tile({ x: j, y: i }, value);
-      if (value <= 2048) this.grid.insertTile(tile);
+      if (value <= 8192) this.grid.insertTile(tile);
     }
   }
 };
@@ -66,12 +87,14 @@ GameManager.prototype.setup = function () {
     this.grid        = new Grid(previousState.grid.size,
                                 previousState.grid.cells); // Reload grid
     this.score       = previousState.score;
+    this.points      = previousState.points;
     this.over        = previousState.over;
     this.won         = previousState.won;
     this.keepPlaying = previousState.keepPlaying;
   } else {
     this.grid        = new Grid(this.size);
-    this.score       = 0;
+		this.score       = 0;
+		this.points      = 0;
     this.over        = false;
     this.won         = false;
     this.keepPlaying = false;
@@ -126,7 +149,7 @@ GameManager.prototype.fillLegend = function () {
     cell.appendChild(img);
     grid.appendChild(cell);
     row.appendChild(grid);
-    p.textContent = Localize(exp);
+    p.textContent = Localize(exp) + "  (" + kcal(exp) + " Kcal)";
     row.appendChild(p);
 
     legend[0].appendChild(row);
@@ -156,7 +179,9 @@ GameManager.prototype.actuate = function () {
   if (this.storageManager.getBestScore() < this.score) {
     this.storageManager.setBestScore(this.score);
   }
-
+	if (this.storageManager.getBestPoints() < this.points) {
+    this.storageManager.setBestPoints(this.points);
+  }
   // Clear the state when the game is over (game over only, not win)
   if (this.over) {
     this.storageManager.clearGameState();
@@ -165,10 +190,12 @@ GameManager.prototype.actuate = function () {
   }
 
   this.actuator.actuate(this.grid, {
-    score:      this.score,
+		score:      this.score,
+		points:     this.points,
     over:       this.over,
     won:        this.won,
     bestScore:  this.storageManager.getBestScore(),
+    bestPoints: this.storageManager.getBestPoints(),
     terminated: this.isGameTerminated()
   });
 
@@ -179,6 +206,7 @@ GameManager.prototype.serialize = function () {
   return {
     grid:        this.grid.serialize(),
     score:       this.score,
+    points:      this.points,
     over:        this.over,
     won:         this.won,
     keepPlaying: this.keepPlaying
@@ -240,11 +268,11 @@ GameManager.prototype.move = function (direction) {
           tile.updatePosition(positions.next);
 
           // Update the score
-          // self.score += merged.value;
+          self.points += kcal(tile.value) * 2;
           if (merged.value > self.score) self.score = merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 2048) self.won = true;
+          if (merged.value === 2048 || merged.value === 2048) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
         }

@@ -57,17 +57,18 @@ h1.title {
   100% {
     top: -50px;
     opacity: 0; } }
-.scores-container {
+.scores-container, .scores-points {
   text-align: right; }
 
-.score-container, .best-container {
+.score-container, .best-container,
+.score-points, .best-points {
   overflow: hidden;
   position: relative;
   display: inline-block;
   background: #f67098;
   padding: 15px 0px;
   font-size: 19px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   height: 19px;
   line-height: 41px;
   font-weight: bold;
@@ -78,7 +79,8 @@ h1.title {
   text-align: center;
   width: 49%;
   float: left; }
-  .score-container:after, .best-container:after {
+  .score-container:after, .best-container:after,
+	.score-points:after, .best-points:after {
     position: absolute;
     width: 100%;
     top: 10px;
@@ -106,12 +108,18 @@ h1.title {
 
 .best-container {
   float: right; }
+.best-points {
+  float: right; }
 
 .score-container:after {
-  content: "Score"; }
+  content: "Cupcake"; }
+.score-points:after {
+  content: "Kcal"; }
 
 .best-container:after {
-  content: "Best"; }
+  content: "Cupcake Max"; }
+.best-points:after {
+	content: "Kcal Max"; }
 
 p {
   margin-top: 0;
@@ -551,7 +559,8 @@ hr {
     width: 280px;
     margin: 0 auto; }
 
-  .score-container, .best-container {
+  .score-container, .best-container,
+  .score-points, .best-points {
     margin-top: 0;
     padding: 15px 0px;
     min-width: 40px; }
@@ -759,7 +768,7 @@ hr {
   .legend-row p {
     margin-left: 93.33333px;
     margin-top: 23.33333px;
-    text-transform: uppercase; }
+    text-transform: capitalize; }
 
 .legend-grid {
   position: relative;
