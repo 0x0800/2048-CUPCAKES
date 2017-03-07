@@ -90,9 +90,12 @@ h1.title {
     line-height: 13px;
     text-align: center;
     color: #3c1b1a; }
-  .score-container .score-addition, .best-container .score-addition {
+  .score-container .score-addition, .best-container .score-addition,
+	.score-points .score-addition, .best-points .score-addition {
     position: absolute;
-    right: 30px;
+    /*right: 60px;*/
+    width: 100%;
+    text-align: center;
     color: red;
     font-size: 19px;
     line-height: 19px;

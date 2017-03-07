@@ -144,6 +144,9 @@ HTMLActuator.prototype.updateScore = function (score, points) {
 HTMLActuator.prototype.updateBestScore = function (bestScore, bestPoints) {
   this.bestContainer.textContent = Localize( "p" + bestScore);
   this.bestPoints.textContent = bestPoints;
+
+	// var difference = score - this.score;
+	// this.score = score;
 };
 
 HTMLActuator.prototype.message = function (won) {
