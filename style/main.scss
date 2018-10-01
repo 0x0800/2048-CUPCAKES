@@ -31,8 +31,9 @@ $base: 2;
 $limit: 13;
 
 // Colors for all 11 states, false = no special color
-$special-colors: false false, // 2
-                 false false, // 4
+$special-colors: false false, // 1
+                 false false, // 2
+                 false true, // 4
                  false true, // 8
                  false true, // 16
                  false true, // 32
@@ -42,9 +43,7 @@ $special-colors: false false, // 2
                  false true, // 512
                  false true, // 1024
                  false true, // 2048
-                 false true, // 4096
-                 false true; // 8192
-
+                
 $title-container-size: 30px;
 
 html, body {
@@ -446,18 +445,7 @@ hr {
     $exponent: $exponent + 1;
   }
 
-  // Super tiles (above 2048)
-  &.tile-super .tile-inner {
-    color: $bright-text-color;
-    background: mix(#333, $tile-gold-color, 95%);
 
-    font-size: 30px;
-
-    @include smaller($mobile-threshold) {
-      font-size: 10px;
-    }
-  }
-}
 
 @include keyframes(appear) {
   0% {
