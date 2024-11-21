@@ -115,14 +115,14 @@ h1.title {
   float: right; }
 
 .score-container:after {
-  content: "Cupcake"; }
+  content: "Fashion"; }
 .score-points:after {
-  content: "Kcal"; }
+  content: "Fashion Points"; }
 
 .best-container:after {
-  content: "Cupcake Max"; }
+  content: "Fashion Max"; }
 .best-points:after {
-	content: "Kcal Max"; }
+	content: "Fashion Points Max"; }
 
 p {
   margin-top: 0;
@@ -348,74 +348,74 @@ hr {
     .tile .tile-inner img {
       width: 100%;
       height: 100%; }
-  .tile.tile-2 .tile-inner {
+  .tile.tile-1 .tile-inner {
     background: white;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
-  .tile.tile-4 .tile-inner {
+  .tile.tile-2 .tile-inner {
     background: #eeeaf1;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
-  .tile.tile-8 .tile-inner {
+  .tile.tile-4 .tile-inner {
     color: white;
     background: #ddd5e3;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
-  .tile.tile-16 .tile-inner {
+  .tile.tile-8 .tile-inner {
     color: white;
     background: #ccc0d5;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
-  .tile.tile-32 .tile-inner {
+  .tile.tile-16 .tile-inner {
     color: white;
     background: #bcabc7;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.07937), inset 0 0 0 1px rgba(255, 255, 255, 0.04762); }
-  .tile.tile-64 .tile-inner {
+  .tile.tile-32 .tile-inner {
     color: white;
     background: #ab96b9;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.15873), inset 0 0 0 1px rgba(255, 255, 255, 0.09524); }
-  .tile.tile-128 .tile-inner {
+  .tile.tile-64 .tile-inner {
     color: white;
     background: #9a81ab;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    font-size: 45px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-64 .tile-inner {
+        font-size: 25px; } }
+  .tile.tile-128 .tile-inner {
+    color: white;
+    background: #8a6c9d;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
         font-size: 25px; } }
   .tile.tile-256 .tile-inner {
     color: white;
-    background: #8a6c9d;
-    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    background: #79578f;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
         font-size: 25px; } }
   .tile.tile-512 .tile-inner {
     color: white;
-    background: #79578f;
-    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
-    font-size: 45px; }
-    @media screen and (max-width: 520px) {
-      .tile.tile-512 .tile-inner {
-        font-size: 25px; } }
-  .tile.tile-1024 .tile-inner {
-    color: white;
     background: #684281;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    font-size: 35px; }
+    @media screen and (max-width: 520px) {
+      .tile.tile-512 .tile-inner {
+        font-size: 15px; } }
+  .tile.tile-1024 .tile-inner {
+    color: white;
+    background: #582e74;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
         font-size: 15px; } }
   .tile.tile-2048 .tile-inner {
     color: white;
-    background: #582e74;
-    box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
-    font-size: 35px; }
-    @media screen and (max-width: 520px) {
-      .tile.tile-2048 .tile-inner {
-        font-size: 15px; } }
-  .tile.tile-super .tile-inner {
-    color: white;
     background: #343236;
     font-size: 30px; }
     @media screen and (max-width: 520px) {
-      .tile.tile-super .tile-inner {
+      .tile.tile-2048 .tile-inner {
         font-size: 10px; } }
 
 @-webkit-keyframes appear {
